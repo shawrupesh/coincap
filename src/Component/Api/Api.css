@@ -27,7 +27,7 @@
   .btn{
     transition: transform 0.2s ease 0s;
   
-    background: rgb(24, 198, 131) !important;
+    background: rgb(24, 198, 131);
     display: block;
     margin: 10px auto;
     color: #fff;
