@@ -17,9 +17,9 @@ useEffect(() => {
  function resultReturn(){
   return result.data  && result.data.slice(0,count).map((item,index)=>{
     const {rank,name,priceUsd,marketCapUsd,vwap24Hr,supply,volumeUsd24Hr,changePercent24Hr,symbol}=item
-   const sym=symbol.toLowerCase()
-  const price =Math.round((priceUsd ) * 100) / 100
-  const vwap =Math.round((vwap24Hr ) * 100) / 100
+    const sym=symbol.toLowerCase()
+    const price =Math.round((priceUsd ) * 100) / 100
+    const vwap =Math.round((vwap24Hr ) * 100) / 100
       return(
        <tr key={index} >
                 <td>{rank}</td>
@@ -30,32 +30,29 @@ useEffect(() => {
                 <td>{ Math.round((supply ) * 100) / 100}</td>
                 <td>${Math.round((volumeUsd24Hr ) * 100) / 100 }</td>
                 <td>{changePercent24Hr}%</td>
-                </tr> )
-   })
-
- }
-
-
+                </tr> 
+            )}
+                )
+                     }
     return (
-        <div>
-           <table className='students'>
-        <tbody>
-   <tr>
-    <th>Rank </th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Market Cap</th>
-    <th>VWAP</th>
-    <th>Supply</th>
-    <th>Volume</th>
-    <th>Change</th>
-  </tr>
-  { resultReturn()}
-  </tbody>
-    </table>
- <button onClick={()=>{setCount(count+10)}} className="btn">View More</button>
-            
-        </div>
+                <div>
+                  <table className='students'>
+                   <tbody>
+                   <tr>
+                     <th>Rank </th>
+                     <th>Name</th>
+                     <th>Price</th>
+                     <th>Market Cap</th>
+                     <th>VWAP</th>
+                     <th>Supply</th>
+                     <th>Volume</th>
+                    <th>Change</th>
+                  </tr>
+                 { resultReturn()}
+            </tbody>
+       </table>
+            <button onClick={()=>{setCount(count+10)}} className="btn">View More</button>
+                </div>
     )
 }
 
