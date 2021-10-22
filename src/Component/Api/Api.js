@@ -2,7 +2,7 @@
 import React from 'react'
 import './Api.css'
 import { useEffect,useState } from 'react'
-let link='https://assets.coincap.io/assets/icons/eth@1x.png'
+
    export function Api()  {
    const [result, setresult] = useState([])   
    const[count,setCount]=useState(10)
