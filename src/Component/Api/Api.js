@@ -17,14 +17,16 @@ useEffect(() => {
  function resultReturn(){
   return result.data  && result.data.slice(0,count).map((item,index)=>{
     const {rank,name,priceUsd,marketCapUsd,vwap24Hr,supply,volumeUsd24Hr,changePercent24Hr,symbol}=item
-   let sym=symbol.toLowerCase()
+   const sym=symbol.toLowerCase()
+  const price =Math.round((priceUsd ) * 100) / 100
+  const vwap =Math.round((vwap24Hr ) * 100) / 100
       return(
        <tr key={index} >
                 <td>{rank}</td>
-               <td><img className="img" src={`https://assets.coincap.io/assets/icons/${sym}@2x.png`} /> {name}</td>
-                <td>${Math.round((priceUsd ) * 100) / 100}</td>
+               <td><img className="img" src={`https://assets.coincap.io/assets/icons/${sym}@2x.png`}  alt='logo'/> {name}</td>
+                <td>${price}</td>
                 <td>${ Math.round((marketCapUsd ) * 100) / 100}</td>
-                <td>${Math.round((vwap24Hr ) * 100) / 100}</td>
+                <td>${vwap}</td>
                 <td>{ Math.round((supply ) * 100) / 100}</td>
                 <td>${Math.round((volumeUsd24Hr ) * 100) / 100 }</td>
                 <td>{changePercent24Hr}%</td>
