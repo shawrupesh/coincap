@@ -48,7 +48,7 @@ useEffect(() => {
                      }
     return (
                 <div>
-                  <table className='students'>
+                  <table className='app'>
                    <tbody>
                    <tr>
                      <th>Rank </th>
